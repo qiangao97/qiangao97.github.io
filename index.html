@@ -73,7 +73,6 @@
     }
     .meta a{font-weight:750}
 
-    /* Section styling (clear separation) */
     section{
       margin-top:30px;
       padding-top:22px;
@@ -118,7 +117,6 @@
     .title{font-weight:780}
     .venue{color:var(--muted)}
 
-    /* Visitors map block */
     .map-wrap{
       margin-top:10px;
       padding:12px;
@@ -157,7 +155,6 @@
         <a href="#awards">Award</a>
         <a href="#service">Service</a>
         <a href="#publications">Publication</a>
-        <a href="#visitors">Visitors</a>
       </nav>
     </header>
 
@@ -203,7 +200,6 @@
         </ul>
       </section>
 
-      <!-- FIX: your nav href="#awards" but your old id was "award" -->
       <section id="awards">
         <div class="section-head">
           <h2>Award</h2>
@@ -226,7 +222,7 @@
           <div class="hint">Community contributions</div>
         </div>
 
-        <p style="margin:0 0 6px; color:var(--muted);"><b>Events</b></p>
+        <p style="margin:0 0 6px; color:var(--muted);"><b>Volunteer</b></p>
         <ul>
           <li>IEEE ICASSP 2024 (Seoul)</li>
           <li>NGMA-ETI 1st &amp; 2nd QMUL 6G Workshop</li>
@@ -239,7 +235,6 @@
         </ul>
       </section>
 
-      <!-- FIX: your nav href="#publications" but your old id was "publication" -->
       <section id="publications">
         <div class="section-head">
           <h2>Publication</h2>
@@ -305,9 +300,10 @@
         </div>
       </section>
 
-      <section id="visitors">
+      <!-- Map section is kept, but NOT in nav -->
+      <section id="map">
         <div class="section-head">
-          <h2>Visitors</h2>
+          <h2>Visitor Map</h2>
           <div class="hint">Global page views</div>
         </div>
 
@@ -316,20 +312,14 @@
             The map below shows the geographic distribution of visits. (Powered by a third-party counter.)
           </p>
 
-          <!-- Option 1 (recommended): ClustrMaps embed -->
-          <!-- After the first few visits, the map will start showing dots/heat and counts -->
           <div style="display:flex;justify-content:center;">
+            <!-- Replace with YOUR own ClustrMaps embed code -->
             <a href="https://mapmyvisitors.com/web/1c2vv" title="Visit tracker"><img src="https://mapmyvisitors.com/map.png?d=t8xs0r6ItyFIwi0TdRLV_LFdBgz3impC-x9IWoHzvA0&cl=ffffff"></a>
           </div>
 
-          <!--
-            IMPORTANT:
-            The ClustrMaps 'd=' token above is an example token.
-            You MUST create your own ClustrMaps widget, then replace the <a href> and <img src> with your own code.
-            How:
-            1) Go to clustrmaps.com -> Add your site URL -> Get HTML code
-            2) Replace the block above with the code they give you
-          -->
+          <p class="muted" style="margin-top:10px;">
+            Setup: go to ClustrMaps → add your site URL → copy the HTML code → replace the link and image above.
+          </p>
         </div>
       </section>
 
