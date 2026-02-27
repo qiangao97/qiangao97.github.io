@@ -3,179 +3,244 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Qian Gao | EECS PhD| QMUL</title>
-  <meta name="description" content="I am currently pursuing my Ph.D. degree in electronic engineering at Queen Mary University of London, U.K. I received the B.S. degree from Harbin Engineering University, Harbin, China, in 2019 and the M.Sc degree from Beijing University of Posts and Telecommunications, Beijing, China, in 2022. My interests include integrated sensing and communication, WiFi human sensing and artifical intelligence." />
+  <title>Qian Gao | Personal Website</title>
+  <meta name="description" content="Qian Gao, Ph.D. student at Queen Mary University of London. Research: ISAC, WiFi human sensing, AI." />
+
   <style>
-    :root { --fg:#111; --muted:#555; --bg:#fff; --card:#f7f7f8; --line:#e7e7ea; --link:#0b57d0; }
+    :root{
+      --fg:#111;
+      --muted:#444;
+      --line:#e7e7ea;
+      --link:#0b57d0;
+      --max:980px;
+    }
     *{box-sizing:border-box}
-    body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--fg);background:var(--bg)}
-    a{color:var(--link);text-decoration:none}
+    body{
+      margin:0;
+      font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      color:var(--fg);
+      background:#fff;
+    }
+    a{color:var(--link); text-decoration:none}
     a:hover{text-decoration:underline}
-    .wrap{max-width:980px;margin:0 auto;padding:28px 18px}
-    header{display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap}
-    nav a{margin-right:14px;color:var(--muted);font-weight:600}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px}
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:14px;
+      padding-bottom:14px;
+      border-bottom:1px solid var(--line);
+    }
+    .name{font-weight:800; font-size:18px}
+    nav a{
+      margin-right:14px;
+      color:var(--muted);
+      font-weight:650;
+    }
     nav a:last-child{margin-right:0}
-    .hero{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:center;margin-top:22px}
-    .avatar{width:120px;height:120px;border-radius:18px;object-fit:cover;background:var(--card);border:1px solid var(--line)}
-    h1{margin:0;font-size:30px;line-height:1.2}
-    .subtitle{margin:8px 0 0;color:var(--muted)}
-    .chips{margin-top:10px;display:flex;flex-wrap:wrap;gap:8px}
-    .chip{background:var(--card);border:1px solid var(--line);padding:4px 10px;border-radius:999px;color:#222;font-size:13px}
-    .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px}
-    .card h3{margin:0 0 8px;font-size:16px}
+    h1{margin:22px 0 8px; font-size:30px; line-height:1.2}
+    .lead{margin:0; color:var(--muted); max-width:860px}
+    .meta{
+      margin-top:10px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      color:var(--muted);
+    }
+    .meta a{font-weight:650}
     section{margin-top:34px}
-    section h2{font-size:20px;margin:0 0 12px}
-    .item{padding:10px 0;border-top:1px solid var(--line)}
-    .item:first-child{border-top:0}
-    .muted{color:var(--muted)}
-    .pub-title{font-weight:700}
-    footer{margin-top:44px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
-    @media (max-width:720px){
-      .hero{grid-template-columns:1fr}
-      .avatar{width:96px;height:96px;border-radius:16px}
-      .grid{grid-template-columns:1fr}
+    section h2{
+      margin:0 0 10px;
+      font-size:20px;
+    }
+    .hr{border-top:1px solid var(--line); margin-top:14px}
+    ul{margin:8px 0 0 18px}
+    li{margin:6px 0}
+    .pub{padding:10px 0; border-top:1px solid var(--line)}
+    .pub:first-child{border-top:0}
+    .tag{
+      display:inline-block;
+      min-width:40px;
+      font-weight:800;
+    }
+    .title{font-weight:750}
+    .venue{color:var(--muted)}
+    footer{
+      margin-top:46px;
+      padding-top:14px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:13px;
     }
   </style>
 </head>
+
 <body>
   <div class="wrap">
     <header>
-      <div style="font-weight:800;">Qian Gao</div>
+      <div class="name">Qian Gao</div>
       <nav>
-        <a href="#about">About</a>
-        <a href="#publications">Publications</a>
-        <a href="#projects">Research</a>
+        <a href="#research">Research Interests</a>
         <a href="#awards">Awards</a>
+        <a href="#service">Service</a>
+        <a href="#publications">Publications</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
-    <div class="hero" id="about">
-      <img class="avatar" src="assets/avatar.jpg" alt="Qian Gao (optional photo)" onerror="this.style.display='none'">
-      <div>
-        <h1>Qian Gao</h1>
-        <p class="subtitle">
-          I am currently pursuing my Ph.D. degree in electronic engineering at Queen Mary University of London, U.K. I received the B.S. degree from Harbin Engineering University, Harbin, China, in 2019 and the M.Sc degree from Beijing University of Posts and Telecommunications, Beijing, China, in 2022. My interests include integrated sensing and communication, WiFi human sensing and artifical intelligence.
+    <main>
+      <h1>Qian Gao</h1>
+
+      <p class="lead">
+        I am currently pursuing my Ph.D. degree in electronic engineering at Queen Mary University of London, U.K.
+        I received the B.S. degree from Harbin Engineering University, Harbin, China, in 2019 and the M.Sc degree from
+        Beijing University of Posts and Telecommunications, Beijing, China, in 2022.
+        My interests include integrated sensing and communication, WiFi human sensing and artifical intelligence.
+        I am supervised by
+        <a href="https://www.eee.hku.hk/~yuanwei/" target="_blank" rel="noreferrer">Prof. Yuanwei Liu</a>
+        and
+        <a href="https://www.seresearch.qmul.ac.uk/cncs/people/rzhong/" target="_blank" rel="noreferrer">Dr. Ruikang Zhong</a>.
+      </p>
+
+      <div class="meta">
+        <span><b>Email:</b> <a href="mailto:q.gao@qmul.ac.uk">q.gao@qmul.ac.uk</a></span>
+        <span>·</span>
+        <span><a href="https://scholar.google.co.uk/citations?user=PXR6luYAAAAJ&hl=zh-CN" target="_blank" rel="noreferrer">Google Scholar</a></span>
+        <span>·</span>
+        <span><a href="files/Qian_Gao_CV.pdf" target="_blank" rel="noreferrer">CV (PDF)</a></span>
+      </div>
+
+      <div class="hr"></div>
+
+      <section id="research">
+        <h2>Research Interests</h2>
+        <ul>
+          <li><b>Learning-based ISAC optimization:</b> reinforcement learning (including multi-agent RL) and deep learning frameworks for joint sensing-communication design.</li>
+          <li><b>Beamforming / antenna selection for large arrays:</b> distributed antenna selection and scalable beamforming for ELAA-based ISAC systems.</li>
+          <li><b>UAV-enabled ISAC:</b> trajectory and beamforming co-optimization in 3D deployments under practical constraints.</li>
+          <li><b>Structured learning pipelines:</b> feature extraction (e.g., autoencoders), RL-based beampattern search, and supervised reconstruction for low-complexity solutions.</li>
+          <li><b>WiFi human sensing:</b> cross-modal representation learning to improve robustness and automation in sensing tasks.</li>
+        </ul>
+      </section>
+
+      <section id="awards">
+        <h2>Awards</h2>
+        <ul>
+          <li>QMUL Postgraduate Research Fund (PGRF), 2024</li>
+          <li>QMUL-CSC Joint Scholarship, 2022</li>
+          <li>Outstanding Graduate of BUPT, 2022</li>
+          <li>National Scholarship for Graduate Students, 2021</li>
+          <li>Excellent Oral Presentation Award, IEEE ICCT, 2021</li>
+          <li>iTeach Competition, National First Prize, 2020</li>
+          <li>The 17th China Graduate Mathematical Modeling, National Third Prize, 2020</li>
+        </ul>
+      </section>
+
+      <section id="service">
+        <h2>Service</h2>
+
+        <p style="margin:0 0 6px; color:var(--muted);">
+          <b>Volunteer</b>
         </p>
+        <ul>
+          <li>IEEE ICASSP 2024 (Seoul), Volunteer</li>
+          <li>NGMA-ETI 1st &amp; 2nd QMUL 6G Workshop, Volunteer</li>
+        </ul>
 
-        <p style="margin:12px 0 0;">
-          <a href="https://scholar.google.co.uk/citations?user=PXR6luYAAAAJ&hl=zh-CN" target="_blank" rel="noreferrer">Google Scholar</a>
-          · <a href="mailto:q.gao@qmul.ac.uk">q.gao@qmul.ac.uk</a>
-          · <a href="files/Qian_Gao_CV.pdf" target="_blank" rel="noreferrer">CV (PDF)</a>
+        <p style="margin:14px 0 6px; color:var(--muted);">
+          <b>Reviewer</b>
         </p>
-      </div>
-    </div>
+        <ul>
+          <li><b>Journals:</b> IEEE TWC, IEEE TCOM, IEEE IoTJ, IEEE TVT, IEEE TCCN, IEEE TGCN</li>
+          <li><b>Conferences:</b> IEEE GLOBECOM, IEEE VTC, IEEE WCNC</li>
+          <li><b>Others:</b> npj Wireless Technology</li>
+        </ul>
+      </section>
 
-    <div class="grid">
-      <div class="card">
-        <h3>Affiliation</h3>
-        <div class="muted">School of EECS, QMUL, London E1 4NS, UK</div>
-        <div>Supervisor: Prof. Yuanwei Liu (Fellow, IEEE)</div>
-      </div>
-      <div class="card">
-        <h3>Focus</h3>
-        <div>Learning-based beamforming / antenna selection for ISAC systems, including pinching antenna and ELAA deployments, with transferable low-complexity designs.</div>
-      </div>
-    </div>
+      <section id="publications">
+        <h2>Publications</h2>
 
-    <section id="publications">
-      <h2>Selected Publications</h2>
+        <h3 style="margin:14px 0 6px; font-size:16px;">arXiv</h3>
+        <div class="pub">
+          <span class="tag">A1</span>
+          <span class="title">RL based Beamforming Optimization for 3D Pinching Antenna assisted ISAC Systems</span><br/>
+          <span class="venue">Q. Gao, R. Zhong, Y. Liu, H. Shin, Y. Liu · arXiv:2601.20654  · 2026</span>
+          · <a href="https://arxiv.org/abs/2601.20654" target="_blank" rel="noreferrer">arXiv</a>
+        </div>
+        <div class="pub">
+          <span class="tag">A2</span>
+          <span class="title">Deep Learning based Three-stage Solution for ISAC Beamforming Optimization</span><br/>
+          <span class="venue">Q. Gao, R. Zhong, Y. Liu · arXiv:2601.20667  · 2026</span>
+          · <a href="https://arxiv.org/abs/2601.20667" target="_blank" rel="noreferrer">arXiv</a>
+        </div>
 
-      <div class="item">
-        <div class="pub-title">Distributed Antenna Selection and Beamforming for ELAA based Downlink ISAC Systems</div>
-        <div class="muted">Q. Gao, R. Zhong, X. Mu, M. Peng, H. Shin, Y. Liu · IEEE Transactions on Vehicular Technology · Early Access · 2025</div>
-      </div>
+        <h3 style="margin:18px 0 6px; font-size:16px;">Journals</h3>
+        <div class="pub">
+          <span class="tag">J1</span>
+          <span class="title">Distributed Antenna Selection and Beamforming for ELAA based Downlink ISAC Systems</span><br/>
+          <span class="venue">Q. Gao, R. Zhong, X. Mu, M. Peng, H. Shin, Y. Liu · IEEE Transactions on Vehicular Technology · Early Access · 2025</span>
+        </div>
+        <div class="pub">
+          <span class="tag">J2</span>
+          <span class="title">Deep Learning based Beamforming Optimization for ISAC Systems: A Low-complexity and Transferable Framework</span><br/>
+          <span class="venue">Q. Gao, R. Zhong, Y. Zou, H. Shin, Y. Liu · IEEE Transactions on Wireless Communications · Major Revision · 2025</span>
+        </div>
+        <div class="pub">
+          <span class="tag">J3</span>
+          <span class="title">MARL-Based UAV Trajectory and Beamforming Optimization for ISAC System</span><br/>
+          <span class="venue">Q. Gao, R. Zhong, H. Shin, Y. Liu · IEEE Internet of Things Journal · 2024</span>
+        </div>
 
-      <div class="item">
-        <div class="pub-title">MARL-Based UAV Trajectory and Beamforming Optimization for ISAC System</div>
-        <div class="muted">Q. Gao, R. Zhong, H. Shin, Y. Liu · IEEE Internet of Things Journal · 2024</div>
-      </div>
+        <h3 style="margin:18px 0 6px; font-size:16px;">Conferences</h3>
+        <div class="pub">
+          <span class="tag">C1</span>
+          <span class="title">Deep Learning Based Three-Stage Solution for ISAC Beamforming Optimization</span><br/>
+          <span class="venue">Q. Gao, R. Zhong, Y. Liu · IEEE GLOBECOM · Accepted · 2025</span>
+        </div>
+        <div class="pub">
+          <span class="tag">C2</span>
+          <span class="title">Trajectory and Beamforming Optimization in UAV-enabled ISAC System</span><br/>
+          <span class="venue">Q. Gao, R. Zhong, Y. Liu · IEEE GLOBECOM · 2024 · pp. 1527–1532</span>
+        </div>
+        <div class="pub">
+          <span class="tag">C3</span>
+          <span class="title">Antenna Selection and Beamforming in ELAA-based ISAC System: A Distributed Approach</span><br/>
+          <span class="venue">Q. Gao, R. Zhong, Y. Liu · IEEE GLOBECOM · 2024 · pp. 1979–1984</span>
+        </div>
+        <div class="pub">
+          <span class="tag">C4</span>
+          <span class="title">AutoSen: Improving Automatic WiFi Human Sensing through Cross-Modal Autoencoder</span><br/>
+          <span class="venue">Q. Gao, Y. Hao, Y. Liu · IEEE ICASSP · 2024 · pp. 8235–8239</span>
+        </div>
+        <div class="pub">
+          <span class="tag">C5</span>
+          <span class="title">Fuzzy Noisy Network for Stable Exploration</span><br/>
+          <span class="venue">Q. Gao, Y. Zhang, Y. Liu · IEEE ICCT · 2021 · pp. 792–796</span>
+        </div>
 
-      <div class="item">
-        <div class="pub-title">AutoSen: Improving Automatic WiFi Human Sensing through Cross-Modal Autoencoder</div>
-        <div class="muted">Q. Gao, Y. Hao, Y. Liu · IEEE ICASSP · 2024</div>
-      </div>
+        <p style="margin-top:12px; color:var(--muted); font-size:14px;">
+          *Publications are organized into arXiv / Journal / Conference, and listed in reverse chronological order (newest first).
+        </p>
+      </section>
 
-      <div class="item">
-        <div class="pub-title">Trajectory and Beamforming Optimization in UAV-enabled ISAC System</div>
-        <div class="muted">Q. Gao, R. Zhong, Y. Liu · IEEE GLOBECOM · 2024</div>
-      </div>
+      <section id="contact">
+        <h2>Contact</h2>
+        <p style="margin:0;">
+          Email: <a href="mailto:q.gao@qmul.ac.uk">q.gao@qmul.ac.uk</a><br/>
+          Affiliation: School of Electronic Engineering and Computer Science, Queen Mary University of London, London E1 4NS, UK
+        </p>
+      </section>
 
-      <div class="item">
-        <div class="pub-title">Antenna Selection and Beamforming in ELAA-based ISAC System: A Distributed Approach</div>
-        <div class="muted">Q. Gao, R. Zhong, Y. Liu · IEEE GLOBECOM · 2024</div>
-      </div>
-
-      <div class="item">
-        <div class="pub-title">Deep Learning Based Three-Stage Solution for ISAC Beamforming Optimization</div>
-        <div class="muted">Q. Gao, R. Zhong, Y. Liu · IEEE GLOBECOM · Accepted · 2025</div>
-      </div>
-
-      <div class="item">
-        <div class="pub-title">Deep Learning based Beamforming Optimization for ISAC Systems: A Low-complexity and Transferable Framework</div>
-        <div class="muted">Q. Gao, R. Zhong, Y. Zou, H. Shin, Y. Liu · IEEE Transactions on Wireless Communications · Major Revision · 2025</div>
-      </div>
-
-      <div class="item">
-        <div class="pub-title">RL based Beamforming Optimization for 3D Pinching Antenna assisted ISAC Systems</div>
-        <div class="muted">Q. Gao, R. Zhong, Y. Zou, H. Shin, Y. Liu · IEEE Transactions on Vehicular Technology · Under Review · 2025</div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <h2>Research Highlights</h2>
-
-      <div class="item">
-        <div class="pub-title">Pinching Antenna assisted ISAC Beamforming (RL)</div>
-        <div class="muted">RL-based low-complexity beamforming optimization for 3D deployments.</div>
-      </div>
-
-      <div class="item">
-        <div class="pub-title">ELAA ISAC: Distributed Antenna Selection & Beamforming</div>
-        <div class="muted">Distributed decision-making to scale to extremely large arrays.</div>
-      </div>
-
-      <div class="item">
-        <div class="pub-title">UAV-enabled ISAC: Trajectory + Beamforming (MARL)</div>
-        <div class="muted">Multi-agent RL for joint mobility and waveform/beam control.</div>
-      </div>
-
-      <div class="item">
-        <div class="pub-title">WiFi Human Sensing</div>
-        <div class="muted">Cross-modal autoencoder for robust automatic sensing.</div>
-      </div>
-    </section>
-
-    <section id="awards">
-      <h2>Awards</h2>
-      <div class="item">QMUL Postgraduate Research Fund (PGRF) · 2024</div>
-      <div class="item">QMUL-CSC Joint Scholarship · 2022</div>
-      <div class="item">Outstanding Graduate of BUPT · 2022</div>
-      <div class="item">National Scholarship for Graduate Students · 2021</div>
-      <div class="item">Excellent Oral Presentation Award · ICCT · 2021</div>
-      <div class="item">iTeach Competition, National First Prize · 2020</div>
-      <div class="item">China Graduate Mathematical Modeling, National Third Prize · 2020</div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="card">
-        <div><b>Email:</b> <a href="mailto:q.gao@qmul.ac.uk">q.gao@qmul.ac.uk</a></div>
-        <div><b>Address:</b> School of EECS, Queen Mary University of London, London E1 4NS, UK</div>
-        <div><b>Google Scholar:</b> <a target="_blank" rel="noreferrer" href="https://scholar.google.co.uk/citations?user=PXR6luYAAAAJ&hl=zh-CN">Profile</a></div>
-      </div>
-    </section>
-
-    <footer>
-      © <span id="y"></span> Qian Gao · Hosted on GitHub Pages
-    </footer>
+      <footer>
+        © <span id="y"></span> Qian Gao · Hosted on GitHub Pages
+      </footer>
+    </main>
   </div>
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
-
 </html>
-
