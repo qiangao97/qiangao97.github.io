@@ -40,7 +40,24 @@
       font-weight:650;
     }
     nav a:last-child{margin-right:0}
-    h1{margin:22px 0 8px; font-size:30px; line-height:1.2}
+
+    .top{
+      display:grid;
+      grid-template-columns: 140px 1fr;
+      gap:18px;
+      align-items:start;
+      margin-top:22px;
+    }
+    .avatar{
+      width:140px;
+      height:180px;
+      object-fit:cover;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:#fff;
+    }
+
+    h1{margin:0 0 8px; font-size:30px; line-height:1.2}
     .lead{margin:0; color:var(--muted); max-width:860px}
     .meta{
       margin-top:10px;
@@ -74,6 +91,10 @@
       color:var(--muted);
       font-size:13px;
     }
+    @media (max-width:720px){
+      .top{grid-template-columns:1fr}
+      .avatar{width:120px;height:160px}
+    }
   </style>
 </head>
 
@@ -86,30 +107,36 @@
         <a href="#awards">Awards</a>
         <a href="#service">Service</a>
         <a href="#publications">Publications</a>
-        <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <main>
-      <h1>Qian Gao</h1>
+      <div class="top">
+        <!-- Put your photo at assets/avatar.jpg -->
+        <img class="avatar" src="assets/avatar.jpg" alt="Qian Gao photo" />
 
-      <p class="lead">
-        I am currently pursuing my Ph.D. degree in electronic engineering at Queen Mary University of London, U.K.
-        I received the B.S. degree from Harbin Engineering University, Harbin, China, in 2019 and the M.Sc degree from
-        Beijing University of Posts and Telecommunications, Beijing, China, in 2022.
-        My interests include integrated sensing and communication, WiFi human sensing and artifical intelligence.
-        I am supervised by
-        <a href="https://www.eee.hku.hk/~yuanwei/" target="_blank" rel="noreferrer">Prof. Yuanwei Liu</a>
-        and
-        <a href="https://www.seresearch.qmul.ac.uk/cncs/people/rzhong/" target="_blank" rel="noreferrer">Dr. Ruikang Zhong</a>.
-      </p>
+        <div>
+          <h1>Qian Gao</h1>
 
-      <div class="meta">
-        <span><b>Email:</b> <a href="mailto:q.gao@qmul.ac.uk">q.gao@qmul.ac.uk</a></span>
-        <span>·</span>
-        <span><a href="https://scholar.google.co.uk/citations?user=PXR6luYAAAAJ&hl=zh-CN" target="_blank" rel="noreferrer">Google Scholar</a></span>
-        <span>·</span>
-        <span><a href="files/Qian_Gao_CV.pdf" target="_blank" rel="noreferrer">CV (PDF)</a></span>
+          <p class="lead">
+            I am currently pursuing my Ph.D. degree in electronic engineering at Queen Mary University of London, U.K.
+            I received the B.S. degree from Harbin Engineering University, Harbin, China, in 2019 and the M.Sc degree from
+            Beijing University of Posts and Telecommunications, Beijing, China, in 2022.
+            My interests include integrated sensing and communication, WiFi human sensing and artifical intelligence.
+            I am supervised by
+            <a href="https://faculty.xjtu.edu.cn/ruikang_zhong/en/index.htm" target="_blank" rel="noreferrer">Dr. Ruikang Zhong</a>
+            and
+            <a href="https://www.eee.hku.hk/~yuanwei/" target="_blank" rel="noreferrer">Prof. Yuanwei Liu</a>.
+          </p>
+
+          <div class="meta">
+            <span><b>Email:</b> <a href="mailto:q.gao@qmul.ac.uk">q.gao@qmul.ac.uk</a></span>
+            <span>·</span>
+            <span><a href="https://scholar.google.co.uk/citations?user=PXR6luYAAAAJ&hl=zh-CN" target="_blank" rel="noreferrer">Google Scholar</a></span>
+            <span>·</span>
+            <span><a href="files/Qian_Gao_CV.pdf" target="_blank" rel="noreferrer">CV (PDF)</a></span>
+          </div>
+        </div>
       </div>
 
       <div class="hr"></div>
@@ -141,21 +168,16 @@
       <section id="service">
         <h2>Service</h2>
 
-        <p style="margin:0 0 6px; color:var(--muted);">
-          <b>Volunteer</b>
-        </p>
+        <p style="margin:0 0 6px; color:var(--muted);"><b>Events</b></p>
         <ul>
-          <li>IEEE ICASSP 2024 (Seoul), Volunteer</li>
-          <li>NGMA-ETI 1st &amp; 2nd QMUL 6G Workshop, Volunteer</li>
+          <li>IEEE ICASSP 2024 (Seoul)</li>
+          <li>NGMA-ETI 1st &amp; 2nd QMUL 6G Workshop</li>
         </ul>
 
-        <p style="margin:14px 0 6px; color:var(--muted);">
-          <b>Reviewer</b>
-        </p>
+        <p style="margin:14px 0 6px; color:var(--muted);"><b>Reviewer</b></p>
         <ul>
-          <li><b>Journals:</b> IEEE TWC, IEEE TCOM, IEEE IoTJ, IEEE TVT, IEEE TCCN, IEEE TGCN</li>
+          <li><b>Journals:</b> IEEE TWC, IEEE TCOM, IEEE IoTJ, IEEE TVT, IEEE TCCN, IEEE TGCN, npj Wireless Technology</li>
           <li><b>Conferences:</b> IEEE GLOBECOM, IEEE VTC, IEEE WCNC</li>
-          <li><b>Others:</b> npj Wireless Technology</li>
         </ul>
       </section>
 
@@ -166,31 +188,31 @@
         <div class="pub">
           <span class="tag">A1</span>
           <span class="title">RL based Beamforming Optimization for 3D Pinching Antenna assisted ISAC Systems</span><br/>
-          <span class="venue">Q. Gao, R. Zhong, Y. Liu, H. Shin, Y. Liu · arXiv:2601.20654  · 2026</span>
+          <span class="venue">Q. Gao, R. Zhong, H. Shin, Y. Liu · arXiv:2601.20654  · 2026 · (submitted to IEEE TVT)</span>
           · <a href="https://arxiv.org/abs/2601.20654" target="_blank" rel="noreferrer">arXiv</a>
         </div>
         <div class="pub">
           <span class="tag">A2</span>
-          <span class="title">Deep Learning based Three-stage Solution for ISAC Beamforming Optimization</span><br/>
-          <span class="venue">Q. Gao, R. Zhong, Y. Liu · arXiv:2601.20667  · 2026</span>
+          <span class="title">Joint Antenna Partitioning and Beamforming Optimization for Segmented Pinching Antenna assisted ISAC Systems</span><br/>
+          <span class="venue">Q. Gao, R. Zhong, H. Shin, Y. Liu · arXiv:2601.20667  · 2026 · (submitted to IEEE TVT)</span>
           · <a href="https://arxiv.org/abs/2601.20667" target="_blank" rel="noreferrer">arXiv</a>
         </div>
 
         <h3 style="margin:18px 0 6px; font-size:16px;">Journals</h3>
         <div class="pub">
           <span class="tag">J1</span>
-          <span class="title">Distributed Antenna Selection and Beamforming for ELAA based Downlink ISAC Systems</span><br/>
-          <span class="venue">Q. Gao, R. Zhong, X. Mu, M. Peng, H. Shin, Y. Liu · IEEE Transactions on Vehicular Technology · Early Access · 2025</span>
+          <span class="title">Deep Learning based Beamforming Optimization for ISAC Systems: A Low-complexity and Transferable Framework</span><br/>
+          <span class="venue">Q. Gao, R. Zhong, Y. Zou, H. Shin, Y. Liu · IEEE Transactions on Wireless Communications · Accepted · 2026</span>
         </div>
         <div class="pub">
           <span class="tag">J2</span>
-          <span class="title">Deep Learning based Beamforming Optimization for ISAC Systems: A Low-complexity and Transferable Framework</span><br/>
-          <span class="venue">Q. Gao, R. Zhong, Y. Zou, H. Shin, Y. Liu · IEEE Transactions on Wireless Communications · Major Revision · 2025</span>
+          <span class="title">Distributed Antenna Selection and Beamforming for ELAA based Downlink ISAC Systems</span><br/>
+          <span class="venue">Q. Gao, R. Zhong, X. Mu, M. Peng, H. Shin, Y. Liu · IEEE Transactions on Vehicular Technology · Accepted · 2025</span>
         </div>
         <div class="pub">
           <span class="tag">J3</span>
           <span class="title">MARL-Based UAV Trajectory and Beamforming Optimization for ISAC System</span><br/>
-          <span class="venue">Q. Gao, R. Zhong, H. Shin, Y. Liu · IEEE Internet of Things Journal · 2024</span>
+          <span class="venue">Q. Gao, R. Zhong, H. Shin, Y. Liu · IEEE Internet of Things Journal · Accepted · 2024</span>
         </div>
 
         <h3 style="margin:18px 0 6px; font-size:16px;">Conferences</h3>
@@ -219,18 +241,6 @@
           <span class="title">Fuzzy Noisy Network for Stable Exploration</span><br/>
           <span class="venue">Q. Gao, Y. Zhang, Y. Liu · IEEE ICCT · 2021 · pp. 792–796</span>
         </div>
-
-        <p style="margin-top:12px; color:var(--muted); font-size:14px;">
-          *Publications are organized into arXiv / Journal / Conference, and listed in reverse chronological order (newest first).
-        </p>
-      </section>
-
-      <section id="contact">
-        <h2>Contact</h2>
-        <p style="margin:0;">
-          Email: <a href="mailto:q.gao@qmul.ac.uk">q.gao@qmul.ac.uk</a><br/>
-          Affiliation: School of Electronic Engineering and Computer Science, Queen Mary University of London, London E1 4NS, UK
-        </p>
       </section>
 
       <footer>
