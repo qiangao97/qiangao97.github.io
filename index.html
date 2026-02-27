@@ -11,8 +11,10 @@
       --fg:#111;
       --muted:#444;
       --line:#e7e7ea;
+      --line2:#d9d9de;
       --link:#0b57d0;
       --max:980px;
+      --section-bg:#fbfbfc;
     }
     *{box-sizing:border-box}
     body{
@@ -24,6 +26,7 @@
     a{color:var(--link); text-decoration:none}
     a:hover{text-decoration:underline}
     .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px}
+
     header{
       display:flex;
       justify-content:space-between;
@@ -31,33 +34,35 @@
       flex-wrap:wrap;
       gap:14px;
       padding-bottom:14px;
-      border-bottom:1px solid var(--line);
+      border-bottom:2px solid var(--line2);
     }
-    .name{font-weight:800; font-size:18px}
+    .name{font-weight:850; font-size:18px}
     nav a{
       margin-right:14px;
       color:var(--muted);
-      font-weight:650;
+      font-weight:700;
     }
     nav a:last-child{margin-right:0}
 
     .top{
       display:grid;
-      grid-template-columns: 140px 1fr;
+      grid-template-columns: 150px 1fr;
       gap:18px;
       align-items:start;
       margin-top:22px;
+      padding-bottom:18px;
+      border-bottom:2px solid var(--line2);
     }
     .avatar{
-      width:140px;
-      height:180px;
+      width:150px;
+      height:190px;
       object-fit:cover;
       border-radius:14px;
       border:1px solid var(--line);
       background:#fff;
     }
 
-    h1{margin:0 0 8px; font-size:30px; line-height:1.2}
+    h1{margin:0 0 8px; font-size:32px; line-height:1.15}
     .lead{margin:0; color:var(--muted); max-width:860px}
     .meta{
       margin-top:10px;
@@ -66,34 +71,79 @@
       gap:10px;
       color:var(--muted);
     }
-    .meta a{font-weight:650}
-    section{margin-top:34px}
-    section h2{
-      margin:0 0 10px;
-      font-size:20px;
+    .meta a{font-weight:750}
+
+    /* Section styling (clear separation) */
+    section{
+      margin-top:30px;
+      padding-top:22px;
+      border-top:2px solid var(--line2);
     }
-    .hr{border-top:1px solid var(--line); margin-top:14px}
+    section:first-of-type{
+      border-top:0;
+      padding-top:0;
+      margin-top:26px;
+    }
+    .section-head{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      padding:10px 12px;
+      border:1px solid var(--line);
+      border-radius:12px;
+      background:var(--section-bg);
+      margin:0 0 12px;
+    }
+    .section-head h2{
+      margin:0;
+      font-size:18px;
+      letter-spacing:0.2px;
+    }
+    .section-head .hint{
+      color:var(--muted);
+      font-size:13px;
+      white-space:nowrap;
+    }
+
     ul{margin:8px 0 0 18px}
     li{margin:6px 0}
     .pub{padding:10px 0; border-top:1px solid var(--line)}
     .pub:first-child{border-top:0}
     .tag{
       display:inline-block;
-      min-width:40px;
-      font-weight:800;
+      min-width:44px;
+      font-weight:900;
     }
-    .title{font-weight:750}
+    .title{font-weight:780}
     .venue{color:var(--muted)}
+
+    /* Visitors map block */
+    .map-wrap{
+      margin-top:10px;
+      padding:12px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:#fff;
+    }
+    .map-wrap .muted{
+      color:var(--muted);
+      font-size:13px;
+      margin:0 0 10px;
+    }
+
     footer{
       margin-top:46px;
       padding-top:14px;
-      border-top:1px solid var(--line);
+      border-top:2px solid var(--line2);
       color:var(--muted);
       font-size:13px;
     }
+
     @media (max-width:720px){
       .top{grid-template-columns:1fr}
-      .avatar{width:120px;height:160px}
+      .avatar{width:125px;height:160px}
+      .section-head .hint{display:none}
     }
   </style>
 </head>
@@ -107,12 +157,12 @@
         <a href="#awards">Award</a>
         <a href="#service">Service</a>
         <a href="#publications">Publication</a>
+        <a href="#visitors">Visitors</a>
       </nav>
     </header>
 
     <main>
       <div class="top">
-        <!-- Put your photo at assets/avatar.jpg -->
         <img class="avatar" src="assets/avatar.jpg" alt="Qian Gao photo" />
 
         <div>
@@ -139,10 +189,11 @@
         </div>
       </div>
 
-      <div class="hr"></div>
-
       <section id="research">
-        <h2>Research Interest</h2>
+        <div class="section-head">
+          <h2>Research Interest</h2>
+          <div class="hint">What I work on</div>
+        </div>
         <ul>
           <li><b>Learning-based ISAC optimization:</b> reinforcement learning (including multi-agent RL) and deep learning frameworks for joint sensing-communication design.</li>
           <li><b>Beamforming / antenna selection for large arrays:</b> distributed antenna selection and scalable beamforming for ELAA-based ISAC systems.</li>
@@ -152,8 +203,12 @@
         </ul>
       </section>
 
-      <section id="award">
-        <h2>Award</h2>
+      <!-- FIX: your nav href="#awards" but your old id was "award" -->
+      <section id="awards">
+        <div class="section-head">
+          <h2>Award</h2>
+          <div class="hint">Selected honors</div>
+        </div>
         <ul>
           <li>QMUL Postgraduate Research Fund (PGRF), 2024</li>
           <li>QMUL-CSC Joint Scholarship, 2022</li>
@@ -166,9 +221,12 @@
       </section>
 
       <section id="service">
-        <h2>Service</h2>
+        <div class="section-head">
+          <h2>Service</h2>
+          <div class="hint">Community contributions</div>
+        </div>
 
-        <p style="margin:0 0 6px; color:var(--muted);"><b>Volunteer</b></p>
+        <p style="margin:0 0 6px; color:var(--muted);"><b>Events</b></p>
         <ul>
           <li>IEEE ICASSP 2024 (Seoul)</li>
           <li>NGMA-ETI 1st &amp; 2nd QMUL 6G Workshop</li>
@@ -181,40 +239,42 @@
         </ul>
       </section>
 
-      <section id="publication">
-        <h2>Publication</h2>
+      <!-- FIX: your nav href="#publications" but your old id was "publication" -->
+      <section id="publications">
+        <div class="section-head">
+          <h2>Publication</h2>
+          <div class="hint">arXiv · Journal · Conference</div>
+        </div>
 
         <h3 style="margin:14px 0 6px; font-size:16px;">arXiv</h3>
         <div class="pub">
           <span class="tag">A2</span>
           <span class="title">Integrated Sensing and Communication for Segmented Waveguide-Enabled Pinching Antenna Systems</span><br/>
-          <span class="venue">Q. Gao, R. Zhong, H. Shin, Y. Liu · arXiv:2601.20667  · 2026 · (IEEE TVT, under review)</span>
-
-          
-          
+          <span class="venue">Q. Gao, R. Zhong, H. Shin, Y. Liu · arXiv:2601.20667 · 2026 · (submitted to IEEE TVT)</span>
+          · <a href="https://arxiv.org/abs/2601.20667" target="_blank" rel="noreferrer">arXiv</a>
         </div>
         <div class="pub">
           <span class="tag">A1</span>
           <span class="title">RL based Beamforming Optimization for 3D Pinching Antenna assisted ISAC Systems</span><br/>
-          <span class="venue">Q. Gao, R. Zhong, Y.Liu, H. Shin, Y. Liu · arXiv:2601.20654  · 2026 · (IEEE TVT, major revision)</span>
-      
+          <span class="venue">Q. Gao, R. Zhong, Y. Liu, H. Shin, Y. Liu · arXiv:2601.20654 · 2026 · (submitted to IEEE TVT)</span>
+          · <a href="https://arxiv.org/abs/2601.20654" target="_blank" rel="noreferrer">arXiv</a>
         </div>
 
         <h3 style="margin:18px 0 6px; font-size:16px;">Journal</h3>
         <div class="pub">
           <span class="tag">J3</span>
           <span class="title">Deep Learning based Beamforming Optimization for ISAC Systems: A Low-complexity and Transferable Framework</span><br/>
-          <span class="venue">Q. Gao, R. Zhong, Y. Zou, H. Shin, Y. Liu · IEEE Transactions on Wireless Communications · 2026 · pp.8754 - 8768</span>
+          <span class="venue">Q. Gao, R. Zhong, Y. Zou, H. Shin, Y. Liu · IEEE Transactions on Wireless Communications · 2026 · pp. 8754–8768</span>
         </div>
         <div class="pub">
           <span class="tag">J2</span>
           <span class="title">Distributed Antenna Selection and Beamforming for ELAA based Downlink ISAC Systems</span><br/>
-          <span class="venue">Q. Gao, R. Zhong, X. Mu, M. Peng, H. Shin, Y. Liu · IEEE Transactions on Vehicular Technology · 2025 · pp.17865 - 17878</span>
+          <span class="venue">Q. Gao, R. Zhong, X. Mu, M. Peng, H. Shin, Y. Liu · IEEE Transactions on Vehicular Technology · 2025 · pp. 17865–17878</span>
         </div>
         <div class="pub">
           <span class="tag">J1</span>
           <span class="title">MARL-Based UAV Trajectory and Beamforming Optimization for ISAC System</span><br/>
-          <span class="venue">Q. Gao, R. Zhong, H. Shin, Y. Liu · IEEE Internet of Things Journal · 2024 · pp.40492 - 40505</span>
+          <span class="venue">Q. Gao, R. Zhong, H. Shin, Y. Liu · IEEE Internet of Things Journal · 2024 · pp. 40492–40505</span>
         </div>
 
         <h3 style="margin:18px 0 6px; font-size:16px;">Conference</h3>
@@ -245,6 +305,34 @@
         </div>
       </section>
 
+      <section id="visitors">
+        <div class="section-head">
+          <h2>Visitors</h2>
+          <div class="hint">Global page views</div>
+        </div>
+
+        <div class="map-wrap">
+          <p class="muted">
+            The map below shows the geographic distribution of visits. (Powered by a third-party counter.)
+          </p>
+
+          <!-- Option 1 (recommended): ClustrMaps embed -->
+          <!-- After the first few visits, the map will start showing dots/heat and counts -->
+          <div style="display:flex;justify-content:center;">
+            <a href="https://mapmyvisitors.com/web/1c2vv" title="Visit tracker"><img src="https://mapmyvisitors.com/map.png?d=t8xs0r6ItyFIwi0TdRLV_LFdBgz3impC-x9IWoHzvA0&cl=ffffff"></a>
+          </div>
+
+          <!--
+            IMPORTANT:
+            The ClustrMaps 'd=' token above is an example token.
+            You MUST create your own ClustrMaps widget, then replace the <a href> and <img src> with your own code.
+            How:
+            1) Go to clustrmaps.com -> Add your site URL -> Get HTML code
+            2) Replace the block above with the code they give you
+          -->
+        </div>
+      </section>
+
       <footer>
         © <span id="y"></span> Qian Gao · Hosted on GitHub Pages
       </footer>
@@ -256,4 +344,3 @@
   </script>
 </body>
 </html>
-
